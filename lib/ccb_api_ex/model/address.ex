@@ -12,6 +12,7 @@ defmodule CcbApiEx.Model.Address do
     latitude: nil,
     longitude: nil
 
+  def from_list(nil), do: nil
   def from_list(maps) do
     Enum.reduce maps, [], fn(map, result) ->
       result ++ [from(map)]

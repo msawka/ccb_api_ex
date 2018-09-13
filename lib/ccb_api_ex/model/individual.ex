@@ -72,7 +72,8 @@ defmodule CcbApiEx.Model.Individual do
     modifier: nil,
     modifier_id: nil,
     created: nil,
-    modified: nil
+    modified: nil,
+    type: nil #from family model
 
   def from_list(maps) do
     Enum.reduce maps, [], fn(map, result) ->
@@ -187,7 +188,8 @@ defmodule CcbApiEx.Model.Individual do
       modifier: map[:modifier],
       modifier_id: map[:modifier_id],
       created: created,
-      modified: modified      
+      modified: modified,
+      type: map[:type]
     }
   end
 end

@@ -2,3 +2,4 @@ apiuser.txt
 groups.xml
 _build/
 deps/
+*.DS_Store*
